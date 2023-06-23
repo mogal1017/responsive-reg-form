@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Registration Form in HTML CSS</title>
     <!---Custom CSS File--->
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <section class="container">
@@ -19,8 +19,8 @@
         </div>
 
         <div class="input-box">
-          <label>Email Address</label>
-          <input type="text" placeholder="Enter email address of Passanger"/>
+          <label>Address</label>
+          <input type="text" placeholder="Enter Address"/>
         </div>
 
         <div class="column">
@@ -30,11 +30,36 @@
           </div>
           <div class="input-box">
             <label>Journey Starting Date</label>
-            <input type="date" placeholder="Journey Starting Date" required />
+            <input type="date" placeholder="Journey Date" required />
+          </div>
+          </div>
+          <div class="column">
+            <div class="input-box">
+              <input type="text" placeholder="From" required />
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="To" required />
+            </div>
+          </div>
+          </div>
+          <div class="column">
+          <div class="input-box">
+            <label>Rop Time</label>
+            <input type="time" placeholder="Rop Time" required />
           </div>
           <div class="input-box">
-            <label>Journey Ending Date</label>
-            <input type="date" placeholder="Journey Ending Date" required />
+            <label>Dep Time</label>
+            <input type="time" placeholder="Dep Time" required />
+          </div>
+          </div>
+          <div class="column">
+          <div class="input-box">
+            <label>Seat Number</label>
+            <input type="text" placeholder="Enter Seat Numbers" required />
+          </div>
+          <div class="input-box">
+            <label>Bus Number</label>
+            <input type="text" placeholder="Enter Bus Numbers" required />
           </div>
         </div>
         <div class="gender-box">
@@ -54,21 +79,25 @@
             </div>
           </div>
         </div>
-        <div class="input-box address">
-          <div class="column">
-            <input type="text" placeholder="From" required />
-          </div>
-          <div class="column">
-            <input type="text" placeholder="To" required />
+        <div class="column">
+          <div class="input-box">
+            <label for="product_price">Price of ticket</label>
+            <input type="number" id="product_price" name="Price" />
           </div>
           <div class="input-box">
-          <label>Seat Number</label>
-          <input type="text" placeholder="Enter Seat Numbers" required />
-        </div>
-          
+            <label for="gst_tax">GST</label>
+            <input type="number" id="gst_tax" name="GST" />
+          </div>
+          <div class="input-box">
+            <label for="final_price">Total Amount</label>
+            <input type="number" id="final_price" name="total" />
+          </div>
         </div>
         <button>Submit</button>
       </form>
     </section>
   </body>
+  <script>
+    
+  </script>
 </html>
