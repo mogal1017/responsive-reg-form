@@ -207,35 +207,6 @@ body {
     </form>
     </section>
   </body>
-  <script>
-    function whatsapp(){
-        var name = document.getElementById("Name").value;
-        var Address = document.getElementById("Address").value;
-        var phone = document.getElementById("phone").value;
-        var check = document.getElementById("check-male").value;
-        var Journey_Date = document.getElementById("Journey_Date").value;
-        var From = document.getElementById("From").value;
-        var To = document.getElementById("To").value;
-        var Rop_Time = document.getElementById("Rop_Time").value;
-        var Dep_Time = document.getElementById("Dep_Time").value;
-        var Seat_Numbers = document.getElementById("Seat_Numbers").value;
-        var Bus_Number = document.getElementById("Bus_Number").value;
 
-        var url = "https://wa.me/"+phone+"?text="
-        +"*Name :* "+name+"%0a"
-        +"*Address :* "+Address+"%0a"
-        +"*Phone :* "+phone+"%0a"
-        +"*Gender :* "+check+"%0a"
-        +"*Journey_Date :* "+Journey_Date+"%0a"
-        +"*From :* "+From+"%0a"
-        +"*To :* "+To+"%0a"
-        +"*Rop_Time :* "+Rop_Time+"%0a"
-        +"*Dep_Time :* "+Dep_Time+"%0a"
-        +"*Seat_Numbers :* "+Seat_Numbers+"%0a"
-        +"*Bus_Number :* "+Bus_Number;
-
-        window.open(url,'_blank').focus();
-    }
-</script>
 
 </html>
