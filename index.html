@@ -8,98 +8,234 @@
     <title>Registration Form in HTML CSS</title>
     <!---Custom CSS File--->
     <link rel="stylesheet" href="style.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(130, 106, 251);
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+    </style>
+    
   </head>
   <body>
+    
     <section class="container">
       <header>Enter Passanger Details</header>
       <form action="#" class="form">
         <div class="input-box">
-          <label>Full Name</label>
-          <input type="text" placeholder="Enter full name of Passanger" required />
+            <label>Full Name</label>
+            <input class="input" type="text" name="Name" id="Name" placeholder="Enter full name of Passenger" required/>
         </div>
 
         <div class="input-box">
-          <label>Address</label>
-          <input type="text" placeholder="Enter Address"/>
+            <label>Address</label>
+            <input class="input" type="text" name="Address" id="Address" placeholder="Enter Address"/>
         </div>
         <div class="gender-box">
-          <h3>Gender</h3>
-          <div class="gender-option">
-            <div class="gender">
-              <input type="radio" id="check-male" name="gender" checked />
-              <label for="check-male">male</label>
+            <h3>Gender</h3>
+            <div class="gender-option">
+                <div class="gender">
+                    <input class="input" type="radio" id="check-male" name="gender" checked/>
+                    <label for="check-male">male</label>
+                </div>
+                <div class="gender">
+                    <input class="input" type="radio" id="check-male" name="gender"/>
+                    <label for="check-female">Female</label>
+                </div>
+                <div class="gender">
+                    <input class="input" type="radio" id="check-male" name="gender"/>
+                    <label for="check-other">prefer not to say</label>
+                </div>
             </div>
-            <div class="gender">
-              <input type="radio" id="check-female" name="gender" />
-              <label for="check-female">Female</label>
-            </div>
-            <div class="gender">
-              <input type="radio" id="check-other" name="gender" />
-              <label for="check-other">prefer not to say</label>
-            </div>
-          </div>
         </div>
 
         <div class="column">
-          <div class="input-box">
-            <label>Phone Number</label>
-            <input type="number" placeholder="Enter phone number of Passanger" required />
-          </div>
-          <div class="input-box">
-            <label>Journey Starting Date</label>
-            <input type="date" placeholder="Journey Date" required />
-          </div>
-          </div>
-          <div class="column">
             <div class="input-box">
-              <input type="text" placeholder="From" required />
+                <label>Phone Number</label>
+                <input class="input" type="tel" name="Phone_no" id="phone" placeholder="Enter phone number of Passenger" required/>
             </div>
             <div class="input-box">
-              <input type="text" placeholder="To" required />
+                <label>Journey Starting Date</label>
+                <input class="input" type="date" name="Journey_Date" id="Journey_Date" placeholder="Journey Date" required/>
             </div>
-          </div>
-          </div>
-          <div class="column">
-          <div class="input-box">
-            <label>Rop Time</label>
-            <input type="time" placeholder="Rop Time" required />
-          </div>
-          <div class="input-box">
-            <label>Dep Time</label>
-            <input type="time" placeholder="Dep Time" required />
-          </div>
-          </div>
-          <div class="column">
-          <div class="input-box">
-            <label>Seat Number</label>
-            <input type="text" placeholder="Enter Seat Numbers" required />
-          </div>
-          <div class="input-box">
-            <label>Bus Number</label>
-            <input type="text" placeholder="Enter Bus Numbers" required />
-          </div>
         </div>
-        
         <div class="column">
-          <div class="input-box">
-            <label for="product_price">Price of ticket</label>
-            <input type="number" id="product_price" name="Price" />
-          </div>
-          <div class="input-box">
-            <label for="gst_tax">GST</label>
-            <input type="number" id="gst_tax" name="GST" />
-          </div>
-          <div class="input-box">
-            <label for="final_price">Total Amount</label>
-            <input type="number" id="final_price" name="total" />
-          </div>
+            <div class="input-box">
+                <input class="input" type="text" name="From" id="From" placeholder="From" required/>
+            </div>
+            <div class="input-box">
+                <input class="input" type="text" name="To" id="To" placeholder="To" required/>
+            </div>
         </div>
-        <button onclick="window.print()">Print this page</button>
-        <button>Submit</button>
-      </form>
+        <div class="column">
+            <div class="input-box">
+                <label>Rop Time</label>
+                <input class="input" type="time" name="Rop_Time" id="Rop_Time" placeholder="Rop Time" required/>
+            </div>
+            <div class="input-box">
+                <label>Dep Time</label>
+                <input class="input" type="time" name="Dep_Time" id="Dep_Time" placeholder="Dep Time" required/>
+            </div>
+        </div>
+        <div class="column">
+            <div class="input-box">
+                <label>Seat Number</label>
+                <input class="input" type="text" name="Seat_Numbers" id="Seat_Numbers" placeholder="Enter Seat Numbers" required/>
+            </div>
+            <div class="input-box">
+                <label>Bus Number</label>
+                <input class="input" type="text" name="Bus_Number" id="Bus_Number" placeholder="Enter Bus Numbers" required/>
+            </div>
+        </div>
+        <button onclick="whatsapp();" class="button" type="submit" name="login">Submit</button>
+    </form>
     </section>
   </body>
   <script>
-    
-  </script>
+    function whatsapp(){
+        var name = document.getElementById("Name").value;
+        var Address = document.getElementById("Address").value;
+        var phone = document.getElementById("phone").value;
+        var check = document.getElementById("check-male").value;
+        var Journey_Date = document.getElementById("Journey_Date").value;
+        var From = document.getElementById("From").value;
+        var To = document.getElementById("To").value;
+        var Rop_Time = document.getElementById("Rop_Time").value;
+        var Dep_Time = document.getElementById("Dep_Time").value;
+        var Seat_Numbers = document.getElementById("Seat_Numbers").value;
+        var Bus_Number = document.getElementById("Bus_Number").value;
+
+        var url = "https://wa.me/"+phone+"?text="
+        +"*Name :* "+name+"%0a"
+        +"*Address :* "+Address+"%0a"
+        +"*Phone :* "+phone+"%0a"
+        +"*Gender :* "+check+"%0a"
+        +"*Journey_Date :* "+Journey_Date+"%0a"
+        +"*From :* "+From+"%0a"
+        +"*To :* "+To+"%0a"
+        +"*Rop_Time :* "+Rop_Time+"%0a"
+        +"*Dep_Time :* "+Dep_Time+"%0a"
+        +"*Seat_Numbers :* "+Seat_Numbers+"%0a"
+        +"*Bus_Number :* "+Bus_Number;
+
+        window.open(url,'_blank').focus();
+    }
+</script>
+
 </html>
